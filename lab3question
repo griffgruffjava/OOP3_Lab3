@@ -1,0 +1,62 @@
+Lab 3
+OOP3
+
+1
+
+2. Polymorphism is when we ask multiple objects to carry out a task, and each object does so in its own way. 
+This is also called Dynamic method lookup, it allows us to treat objects of different classes in a uniform way. 
+
+Polymorphism is an OOP technique which makes it possible to design and implement systems that are more easily extensible. 
+It allows programs to process generically – using superclass objects - objects of all existing classes in a given hierarchy
+
+In Java, method calls are always determined by the type of the actual object, not the type of the variable containing the object reference 
+This is called dynamic method lookup.
+
+3.  Late binding, or dynamic binding, is a computer programming mechanism in which the method being called upon an 
+    object is looked up by name at runtime. So in q1 when we use toString() method on the tank and the car, which toString() used is determined 
+    at run time by which type of object is calling it.
+    
+4&5.  The main primary difference between a abstract and concrete class is that an abstract class can not be instantiated. Generally abstract classes 
+    are higher up the hierachy chart and concrete classes inherit from them. So you could have a abstract Person class which has two concrete 
+    subclasses like Pupil and Teacher. Both of the concrete classes inherit all methods of Person and if those methods are abstract,
+    they must complete (write) them.    
+
+6a) You cannot instantiate an abstract class. It makes sense to make employee abstract so that you can give certain attributes and methods to 
+   	subclasses.
+   	
+b)  If you try to make employee concrete you must finish the abstract earning method.
+
+c)  ??
+
+d)  It is possible for an abstract class to contain no abstract methods
+
+e)  An Error occurs if you try to put {} in an abstract method or remove the ';'
+
+7f) You can tell Manager is concrete because it is final
+
+g)	If a class is final, it can not be extended. It is the end of the hierachy chart.
+
+h)  Manager extends Employee so we know it inherits from it. We prove this by seeing that Manager writes the abstract method earnings()
+
+i)  In the Manager multi constructor, super(fn,ln) is used. This is reference to the multi argument constructor in the parent class Employee, 
+	although it is allowed to be called in this manner, it must be used in the first line of the Manager constructor
+	
+j) 	Any attempt to set a negative number for salery will default the salery to 0.
+
+k)	Manager must have earnings() method and it must have that name because it inherits from Employee and must finish that abstract method
+
+l)	You need to have the super reference to toString or else you get a runtime error.
+
+m)	The toString() method actually is an example of overriding because it is redefining what toString() does
+
+8a)	When the driver calls toString() and earnings() on emp, these are examples of polymorphism becasue depending on 	
+	what is in emp (manager or hw) will determine what method is used. 
+   	 
+b)	JOptionPane.showMessageDialog(null,String.format("\n%s: earnings were $%.2f\n\n",
+       emp.toString(),emp.earnings()));   before the program runs, it does not know what class will be calling these methods, so this	
+       is dynamic method binding
+      
+c) 	You cannot convert from superclass to subclass
+
+       
+       
